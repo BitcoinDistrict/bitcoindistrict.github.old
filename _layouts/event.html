@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page event-page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          <h1 id="page-title" class="event-title" itemprop="headline">
+            <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.event_title }}</a>
+          </h1>
+          <p>{{ page.description }}</p>
+          <section class="event-rsvp">
+            <p>
+              <a href="{{ page.rsvp_url }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">RSVP</a>
+            </p>
+          </section>
+          <p class="event-dates">
+            <strong>Starts:</strong> {{ page.start_date }} at {{ page.start_time }}<br>
+            <strong>Ends:</strong> {{ page.end_date }} at {{ page.end_time }}
+          </p>
+          {% include page__meta.html %}
+        </header>
+      {% endunless %}
+
+      <section class="event-venue">
+        <p><strong>{{ page.venue_name }}</strong>
+        <br />{{ page.location }}</p>
+      </section>
+
+      <section class="page__content event-description" itemprop="text">
+        <div class="event-photo">
+          {% if page.photo %}
+            <img src="{{ page.photo }}" alt="Photo for {{ page.event_title }}">
+          {% endif %}
+        </div>
+        <br />
+
+        <section class="page__content event-description" itemprop="text">
+          {{ content }}
+        </section>        
+
+        <!-- RSVP Link Section -->
+        {% if page.rsvp_url %}
+          <section class="event-rsvp">
+            <p>
+              <a href="{{ page.rsvp_url }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">RSVP</a>
+            </p>
+          </section>
+        {% endif %}
+
+        {% if page.link %}
+          <div>
+            <a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a>
+          </div>
+        {% endif %}
+      </section>
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+        {% include page__date.html %}
+      </footer>
+
+      {% if page.share %}
+        {% include social-share.html %}
+      {% endif %}
+
+      {% include post_pagination.html %}
+    </div>
+
+    {% if site.comments.provider and page.comments %}
+      {% if jekyll.environment == 'production' %}
+        {% include comments.html %}
+      {% else %}
+        <p>Comments are configured with provider: <strong>{{ site.comments.provider }}</strong>, but are disabled in non-production environments.</p>
+      {% endif %}
+    {% endif %}
+  </article>
+
+  {% if page.id and page.related %}
+    {% include page__related.html posts=site.related_posts %}
+  {% elsif page.id and page.related %}
+    {% include page__related.html posts=site.posts %}
+  {% endif %}
+</div>
