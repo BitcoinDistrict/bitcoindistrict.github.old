@@ -1,0 +1,16 @@
+- title: "Bitcoin District"
+  image_path: /assets/img/logos/bd.png
+  link: "https://www.meetup.com/bitcoin-district"
+  description: "Bitcoiners living and working in and around Washington, DC."
+- title: "DC BitDevs"
+  image_path: /assets/img/logos/dcbitdevs.png
+  link: "https://www.meetup.com/dc-bit-devs"
+  description: "Community for discussing and advancing Bitcoin and related protocols."
+- title: "Shenandoah Bitcoin Club"
+  image_path: /assets/img/logos/shenandoah.png
+  link: "https://www.meetup.com/shenandoah-bitcoin-club"
+  description: "Educating and collaborating on Bitcoin in the Northern Shenandoah Valley."
+- title: "Bitcoin Annapolis"
+  image_path: /assets/img/logos/annapolis.png
+  link: "https://www.meetup.com/bitcoin-annapolis"
+  description: "Bitcoiners in Annapolis who get together for coffee and discuss Bitcoin-only topics."

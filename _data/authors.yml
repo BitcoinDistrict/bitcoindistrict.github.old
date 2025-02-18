@@ -1,0 +1,13 @@
+# /_data/authors.yml
+
+Trey:
+  name        : "Trey"
+  bio         : "Fix the Money, Fix the World!"
+  avatar      : "https://x.com/TreyMusgrave/photo"
+  links:
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/treymusgrave"
+    - label: "Nostr"
+      icon: "fa-solid fa-kiwi-bird"
+      url: "https://primal.net/trey"

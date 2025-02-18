@@ -141,7 +141,7 @@ author:
 # Site Footer
 footer:
   links:
-    - label: ""
+    - label: "Xitter"
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/BTCDistrict"
     - label: "Meetup"
@@ -313,7 +313,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: # true
       share: true
       related: true

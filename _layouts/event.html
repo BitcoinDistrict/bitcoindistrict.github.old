@@ -49,7 +49,11 @@ layout: default
 
       <section class="event-venue">
         <p><strong>{{ page.venue_name }}</strong>
-        <br />{{ page.location }}</p>
+        <br />
+          <a href="https://www.google.com/maps/search/?q={{ page.location | url_encode }}" target="_blank">
+            {{ page.location }}
+        </a>
+        </p>
       </section>
 
       <section class="page__content event-description" itemprop="text">
