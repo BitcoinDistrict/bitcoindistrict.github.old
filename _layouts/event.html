@@ -50,9 +50,12 @@ layout: default
       <section class="event-venue">
         <p><strong>{{ page.venue_name }}</strong>
         <br />
-          <a href="https://www.google.com/maps/search/?q={{ page.location | url_encode }}" target="_blank">
-            {{ page.location }}
-        </a>
+        <a href="https://www.google.com/maps?q={{ page.location | replace: ' ', '+' }}" 
+        id="google-maps-link"
+        target="_blank" 
+        rel="noopener noreferrer">
+       {{ page.location }}
+     </a>
         </p>
       </section>
 

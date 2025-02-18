@@ -1,5 +1,5 @@
 ---
-title: Bitcoin Only Meetups
+title: Bitcoin Meetups
 permalink: /community/
 ---
 
@@ -12,12 +12,12 @@ These are the Bitcoin meetups in the DC, Maryland & Virginia greater metro area.
             <div class="community">
                 <div class="community-image">
                     <a href="{{ community.link }}" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ site.url }}{{ site.baseurl }}{{ community.image_path }}" alt="image-left" class="align-left" style="width: 150px; height: auto;">
+                        <img src="{{ site.url }}{{ site.baseurl }}{{ community.image_path }}" alt="image-left" class="align-left" style="width: 100px; height: auto; vertical-align: middle;">
                     </a>
                 </div>
-                <div class="community-description">
+                <div class="community-description" style="vertical-align: middle;">
                     <p>
-                        <h3>{{ community.title }}</h3>
+                        <a href="{{ community.link }}" target="_blank" rel="noopener noreferrer"><h3>{{ community.title }}</h3></a>
                         {{ community.description }}
                     </p>
                 </div>
