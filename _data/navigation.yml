@@ -2,7 +2,39 @@
 main:
   - title: "Events"
     url: /events/
-  - title: "Community"
-    url: /community/
+  - title: "Meetups"
+    url: /meetups/
   - title: "About"
     url: /about/
+  - title: "Book Club"
+    url: /bookclub
+
+events:
+  - title: "Get Involved"
+    children: 
+      - title: "All Events"
+        url: /events/
+      - title: "DC BitDevs"
+        url: /bitdevs/
+      - title: "Book Club"
+        url: /bookclub/
+      - title: "Conferences"
+        url: /conferences/
+      - title: "Coffee & Bitcoin"
+        url: /coffee/
+      - title: "Meetups"
+        url: /meetups/
+
+bitdevs:
+  - title: "BitDevs"
+    children:
+      - title: Website
+        url: "https://dcbitdevs.com"
+      - title: GitHub
+        url: "https://github.com/dcbitdevs/dcbitdevs.github.io"
+      - title: Meetup
+        url: "https://www.meetup.com/dc-bit-devs/"
+      - title: Nostr
+        url: "https://primal.net/p/npub169k86gmjg8f9ycarzw9quxcawust8xnpfnlmagnfkcxgvf4jukls2j02zu"
+      - title: X/Twitter
+        url: "https://x.com/DCbitdevs"

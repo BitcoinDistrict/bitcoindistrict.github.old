@@ -1,6 +1,7 @@
 ---
 title: About Us
 permalink: /about/
+layout: single
 ---
 
 Bitcoin District is a network of Bitcoiners who live and work around the greater DC, Maryland and Virginia (DMV) metro area.​

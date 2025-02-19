@@ -1,6 +1,7 @@
 ---
-title: Bitcoin Meetups
-permalink: /community/
+title: Bitcoin Community Meetups
+permalink: /meetups/
+layout: single
 ---
 
 These are the Bitcoin meetups in the DC, Maryland & Virginia greater metro area. Let us know if we're missing any.

@@ -1,13 +1,30 @@
 # /_data/authors.yml
-
 Trey:
   name        : "Trey"
-  bio         : "Fix the Money, Fix the World!"
-  avatar      : "https://x.com/TreyMusgrave/photo"
+  bio         : "Fix the money, fix the world!"
+  avatar      : "/assets/img/authors/trey.png"
   links:
-    - label: "X"
+    - label: "X/Twitter"
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/treymusgrave"
     - label: "Nostr"
       icon: "fa-solid fa-kiwi-bird"
       url: "https://primal.net/trey"
+
+DC BitDevs:
+  name        : "DC BitDevs"
+  bio         : "A community for those interested in discussing and participating in the research and development of Bitcoin and related protocols."
+  avatar      : "/assets/img/authors/dcbitdevs.png"
+  links:
+    - label: "Website"
+      icon: "fa-solid fa-link"
+      url: "https://dcbitdevs.com"
+    - label: "X/Twitter"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/DCbitdevs"
+    - label: "Nostr"
+      icon: "fa-solid fa-kiwi-bird"
+      url: "https://primal.net/p/npub169k86gmjg8f9ycarzw9quxcawust8xnpfnlmagnfkcxgvf4jukls2j02zu"
+    - label: "GitHub"
+      icon: "fa-brands fa-github"
+      url: "https://github.com/dcbitdevs/dcbitdevs.github.io"
