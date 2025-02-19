@@ -10,8 +10,8 @@ Join us for a "Coffee & Bitcoin" meetup where we'll talk about what's happening 
 We highly encourage anyone who is new to Bitcoin or just a little curious to come and ask questions... don't be shy!
 
 
-{% assign upcoming_events = site.posts | where: "categories", "coffee" | where_exp: "post", "post.date > site.time" | sort: "date" %}
-{% assign past_events = site.posts | where: "categories", "coffee" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse%}
+{% assign upcoming_events = site.posts | where: "tags", "coffee" | where_exp: "post", "post.date > site.time" | sort: "date" %}
+{% assign past_events = site.posts | where: "tags", "coffee" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse%}
 
 ### Upcoming Events
 {% if upcoming_events.size > 0 %}
