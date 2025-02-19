@@ -30,9 +30,7 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
-          <h1 id="page-title" class="event-title" itemprop="headline">
-            <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.event_title }}</a>
-          </h1>
+          <h1 id="page-title" class="event-title" itemprop="headline">{{ page.title }}</h1>
           <p>{{ page.description }}</p>
           <section class="event-rsvp">
             <p>
@@ -40,8 +38,8 @@ layout: default
             </p>
           </section>
           <p class="event-dates">
-            <strong>Starts:</strong> {{ page.start_date }} at {{ page.start_time }}<br>
-            <strong>Ends:</strong> {{ page.end_date }} at {{ page.end_time }}
+            <strong>Starts:</strong> {{ page.date | date: "%B %d, %Y %I:%M %p %Z" }}<br>
+            <strong>Ends:</strong> {{ page.end_date | date: "%B %d, %Y %I:%M %p %Z" }}
           </p>
           {% include page__meta.html %}
         </header>
@@ -50,19 +48,14 @@ layout: default
       <section class="event-venue">
         <p><strong>{{ page.venue_name }}</strong>
         <br />
-        <a href="https://www.google.com/maps?q={{ page.location | replace: ' ', '+' }}" 
-        id="google-maps-link"
-        target="_blank" 
-        rel="noopener noreferrer">
        {{ page.location }}
-     </a>
         </p>
       </section>
 
       <section class="page__content event-description" itemprop="text">
         <div class="event-photo">
           {% if page.photo %}
-            <img src="{{ page.photo }}" alt="Photo for {{ page.event_title }}">
+            <img src="{{ page.photo }}" alt="Photo for {{ page.title }}">
           {% endif %}
         </div>
         <br />
