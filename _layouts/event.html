@@ -92,7 +92,7 @@ layout: default
         {% include social-share.html %}
       {% endif %}
 
-      {% include post_pagination.html %}
+      {% comment %}{% include post_pagination.html %}{% endcomment %}
     </div>
 
     {% if site.comments.provider and page.comments %}
