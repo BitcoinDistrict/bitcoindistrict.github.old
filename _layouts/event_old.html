@@ -36,7 +36,7 @@ layout: default
           <p>{{ page.description }}</p>
           <section class="event-rsvp">
             <p>
-              <a href="{{ page.rsvp_url }}" class="btn btn--primary" style="display: block; width: 100%; text-align: center;" target="_blank" rel="noopener noreferrer">RSVP</a>
+              <a href="{{ page.rsvp_url }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">RSVP</a>
             </p>
           </section>
           <p class="event-dates">
@@ -47,15 +47,12 @@ layout: default
         </header>
       {% endunless %}
 
-      {% if venue %}
-      <p><strong>{{ venue.name }}</strong>
-        <br />{{ venue.address }}</p>
-      {% else %}
-        <section class="event-venue">
-          <p><strong>{{ page.venue }}</strong>
-          <br />{{ page.location }}</p>
-        </section>
-      {% endif %}
+      <section class="event-venue">
+        <p><strong>{{ page.venue_name }}</strong>
+        <br />
+       {{ page.location }}
+        </p>
+      </section>
 
       <section class="page__content event-description" itemprop="text">
         <div class="event-photo">
@@ -67,26 +64,13 @@ layout: default
 
         <section class="page__content event-description" itemprop="text">
           {{ content }}
-        </section>
-        
-        {% assign venue = site.data.venues[page.venue] %}
-
-      {{ "## Getting There" | markdownify }}
-      {% if venue %}
-        {% for transport in venue.getting_there %}
-          <p><strong>{{ transport.label }}<br /> </strong>{{ transport.detail }}</p>
-        {% endfor %}
-
-        {% if venue.note %}
-          <p>📝 <strong>Note:</strong> {{ venue.note }}</p>
-        {% endif %}
-      {% endif %}
+        </section>        
 
         <!-- RSVP Link Section -->
         {% if page.rsvp_url %}
           <section class="event-rsvp">
             <p>
-              <a href="{{ page.rsvp_url }}" class="btn btn--primary" style="display: block; width: 100%; text-align: center;" target="_blank" rel="noopener noreferrer">RSVP</a>
+              <a href="{{ page.rsvp_url }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">RSVP</a>
             </p>
           </section>
         {% endif %}

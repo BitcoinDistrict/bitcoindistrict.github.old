@@ -154,10 +154,14 @@ body_class: coin-selector-page
         if (selectedCoin === "Bitcoin") {
             resultDiv.innerHTML = `
                 <p>Hell yeah! There is no second best.</p>
-                <img src="/assets/img/feature/nosecondbest.svg" alt="There is no second best." width="150">
+                <img src="/assets/img/feature/nosecondbest.jpg" alt="There is no second best." width="150">
             `;
         } else if (selectedCoin) {
-            resultDiv.innerHTML = `Come on... You're smarter than that.. Don't waste your time with ${selectedCoin}`;
+            resultDiv.innerHTML = `
+                <p>Come on... You're smarter than that.. Don't waste your time with ${selectedCoin}!</p>
+                <img src="/assets/img/feature/confusedmeme.png" alt="There is no second best." width="150">
+            `;
+
         } else {
             resultDiv.innerHTML = "";
         }

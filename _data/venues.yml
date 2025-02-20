@@ -1,0 +1,39 @@
+Compass Coffee (1703 H St NW):
+  name        : "Compass Coffee (1703 H St NW)"
+  address     : "1703 H St NW, Washington, DC 20006, USA"
+  getting_there:
+    - label: "Farragut West Metro"
+      detail: "🔵🟠⚪ Farragut West Metro + 3 min walk"
+    - label: "Farragut North Metro"
+      detail: "🔴 Farragut North Metro + 5 min walk"
+    - label: "Street Parking"
+      detail: "Street parking is available in front of the café on H St."
+  note: This event may start after the cafe closes! Compass is kind enough to open its doors to our community after hours 🧡
+
+Strategy HQ:
+  name        : "Strategy HQ"
+  address     : "1850 Towers Cres Plaza, Tysons, VA 22182, USA"
+  getting_there:
+    - label: "Tysons Metro"
+      detail: "🚆🚶‍♂️‍➡️15min walk from Tysons Metro Station (Silver Line)"
+    - label: "Parking"
+      detail: > 
+        <ul>
+            <li> Follow the road to the parking garage on the left side of the Strategy HQ building (follow the fountains).</li>
+            <li> Continue down the road passed the marked visitor's parking and proceed down the garage ramp. "1850 Parking" is the sign to follow.</li>
+            <li> Proceed to get a ticket and park anywhere that is not reserved.</li>
+            <li> Take the garage elevator to the Lobby.</li>
+            <li> Once in the Lobby, let Security know you're there for the Strategy event on the 7th floor. Security will escort you to the 7th floor.</li>
+        </ul>
+  note: Issue parking? Contact Facilities at FacilitiesAdministration@microstrategy.com or VAQuikPark at (703) 459-4523
+
+Compass Coffee (Falls Church):
+  name        : "Compass Coffee (Falls Church)"
+  address     : "7393 Lee Hwy, Falls Church, VA 22042, USA"
+  getting_there:
+    - label: "Parking"
+      detail: "🚗 Ample parking at the shopping center"
+    - label: "Metro + Bus"
+      detail: "🚆🚍 Dunn Loring Station (orange line) + bus to Lee Hwy & Lee Oaks Ct stop"
+  note: >
+   Be sure to check out the special <a href="https://www.compasscoffee.com/products/bitcoin-blend">Bitcoin Blend</a>, an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!

@@ -16,7 +16,7 @@ Bitcoin Conferences happening in the DMV area.
   <div class="events-list">
     {% for post in upcoming_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} >> <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.venue_name }})
+        {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.venue }})
       </section>
     {% endfor %}
   </div>
@@ -29,7 +29,7 @@ Bitcoin Conferences happening in the DMV area.
   <div class="events-list">
     {% for post in past_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} >> <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.venue_name }})
+        {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.venue}})
       </section>
     {% endfor %}
   </div>

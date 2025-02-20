@@ -18,7 +18,7 @@ We highly encourage anyone who is new to Bitcoin or just a little curious to com
   <div class="events-list">
     {% for post in upcoming_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} >> <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>
@@ -31,7 +31,7 @@ We highly encourage anyone who is new to Bitcoin or just a little curious to com
   <div class="events-list">
     {% for post in past_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} >> <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>

@@ -4,7 +4,7 @@ date: 2025-01-25 11:00:00 -05:00
 end_date: 2025-01-25 13:00:00 -05:00
 rsvp_url: "https://www.meetup.com/bitcoin-district/events/305562485"
 description: "Join Bitcoin District as we participate in the Running Bitcoin Challenge to honor Hal Finney and raise funds to help find a cure for ALS."
-venue_name: "Smithsonian Metro Station (Outside)"
+venue: "Smithsonian Metro Station (Outside)"
 location: "VXQC+JM, Washington, DC, USA"
 layout: event
 photo: "/assets/img/events/runningbtc.jpg"
@@ -15,7 +15,7 @@ categories:
 tags:
     - event
     - dc
-    - plebwalk
+    - walk
 ---
 
 This is THE ACTIVITY that combines Hal Finney's love of running and Bitcoin and is raising funds and awareness to help cure ALS! Join your fellow DMV Bitcoiners as we walk/crawl/run/roll around the National Mall in honor of Hal.

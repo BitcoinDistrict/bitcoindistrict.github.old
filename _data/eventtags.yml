@@ -1,0 +1,23 @@
+coffee:
+  name        : "Coffee"
+  emoji       : ☕
+
+conference:
+  name        : "Conference"
+  emoji       : 🎤
+
+workshop:
+  name        : "Workshop"
+  emoji       : ⚙️
+
+bitdevs:
+  name        : "BitDevs"
+  emoji       : 👨‍💻
+
+bookclub:
+  name        : "Book Club"
+  emoji       : 📚
+
+walk:
+  name        : "Pleb Walk"
+  emoji       : 🚶‍♀️‍➡️

@@ -4,8 +4,7 @@ date: 2025-09-20 09:00:00
 end_date: 2025-09-20 18:00:00
 rsvp_url: "https://opnext.dev/"
 description: "BitcoinDay isn't just an event, it's an opportunity to increase your understanding of Bitcoin, connect with experts and influencers, and amplify your impact on the sound money revolution."
-venue_name: "Strategy, HQ"
-location: "1850 Towers Cres Plaza, Tysons, VA 22182, USA"
+venue: "Strategy HQ"
 layout: event
 photo: "/assets/img/events/bitcoinday.jpg"
 categories:

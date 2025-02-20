@@ -6,8 +6,6 @@ main:
     url: /meetups/
   - title: "About"
     url: /about/
-  - title: "Book Club"
-    url: /bookclub
 
 events:
   - title: "Get Involved"
