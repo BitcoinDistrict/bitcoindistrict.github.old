@@ -6,7 +6,9 @@ rsvp_url: "https://www.meetup.com/bitcoin-district/events/305562167"
 description: "The Bitcoin District Book Club will meet to discuss Abundance Through Scarcity by Ioni Appelberg!"
 venue: "Compass Coffee (1703 H St NW)"
 layout: event
-photo: "/assets/img/events/bookclub.jpg"
+header:
+    image: "/assets/img/events/bookclub.jpg"
+    og_image: "/assets/img/events/bookclub.jpg"
 author: Trey
 categories:
     - events

@@ -7,7 +7,9 @@ description: "A very short description of the event (1-2 sentences)"
 venue_name: "Name of the Venue"
 location: "Address"
 layout: event
-photo: "/assets/img/events/default.jpg"
+header:
+    image: "/assets/img/events/default.jpg"
+    og_image: "/assets/img/events/default.jpg"
 categories:
     - events
 tags:

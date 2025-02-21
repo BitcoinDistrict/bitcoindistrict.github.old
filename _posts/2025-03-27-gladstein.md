@@ -6,10 +6,10 @@ rsvp_url: "https://lu.ma/gq0rpxpd"
 rsvp_text: "Register on Luma"
 description: "Alex Gladstein will be in Washington DC to discuss his book Hidden Repression: How the IMF and World Bank Sell Exploitation as Development"
 venue: "George Washington University (Ames Hall B101)"
-location: "2100 Foxhall Rd NW, Washington, DC 20007, USA"
 layout: event
 photo: "/assets/img/events/gladstein-hrf-gw.jpg"
-header: 
+header:
+    image: "/assets/img/events/gladstein-hrf-gw.jpg"
     og_image: "/assets/img/events/gladstein-hrf-gw.jpg"
 categories:
     - events

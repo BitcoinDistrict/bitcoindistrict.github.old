@@ -8,6 +8,9 @@ venue: "Smithsonian Metro Station (Outside)"
 location: "VXQC+JM, Washington, DC, USA"
 layout: event
 photo: "/assets/img/events/runningbtc.jpg"
+header:
+    image: "/assets/img/events/runningbtc.jpg"
+    og_image: "/assets/img/events/runningbtc.jpg"
 author: Trey
 categories:
     - events

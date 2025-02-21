@@ -6,7 +6,9 @@ rsvp_url: "https://bitcoinday.io/tysons25"
 description: "BitcoinDay isn't just an event, it's an opportunity to increase your understanding of Bitcoin, connect with experts and influencers, and amplify your impact on the sound money revolution."
 venue: "Strategy HQ"
 layout: event
-photo: "/assets/img/events/bitcoinday.jpg"
+header:
+    image: "/assets/img/events/bitcoinday.jpg"
+    og_image: "/assets/img/events/bitcoinday.jpg"
 categories:
     - events
     - conferences
