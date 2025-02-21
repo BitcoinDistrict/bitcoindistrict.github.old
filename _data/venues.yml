@@ -37,3 +37,14 @@ Compass Coffee (Falls Church):
       detail: "🚆🚍 Dunn Loring Station (orange line) + bus to Lee Hwy & Lee Oaks Ct stop"
   note: >
    Be sure to check out the special <a href="https://www.compasscoffee.com/products/bitcoin-blend">Bitcoin Blend</a>, an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!
+
+George Washington University (Ames Hall B101):
+  name        : "George Washington University, Ames Hall B101"
+  address     : "2100 Foxhall Rd NW, Washington, DC 20007, USA"
+  getting_there:
+    - label: "Parking"
+      detail: "🚗 Parking Instructions TBD"
+    - label: "Bus"
+      detail: "🚍 Bus Stop Instructions TBD"
+  note: >
+   Thank you George Washington University for hosting.

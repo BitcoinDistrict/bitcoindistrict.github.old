@@ -4,7 +4,7 @@ coffee:
 
 conference:
   name        : "Conference"
-  emoji       : 🎤
+  emoji       : 🎟️
 
 workshop:
   name        : "Workshop"
@@ -21,3 +21,7 @@ bookclub:
 walk:
   name        : "Pleb Walk"
   emoji       : 🚶‍♀️‍➡️
+
+speaker:
+  name        : "Speaker"
+  emoji       : 🎤

@@ -33,18 +33,12 @@ layout: default
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
           <h1 id="page-title" class="event-title" itemprop="headline">{{ page.title }}</h1>
-          <p>{{ page.description }}</p>
-          <section class="event-rsvp">
-            <p>
-              <a href="{{ page.rsvp_url }}" class="btn btn--primary" style="display: block; width: 100%; text-align: center;" target="_blank" rel="noopener noreferrer">RSVP</a>
-            </p>
-          </section>
-          <p class="event-dates">
-            <strong>Starts:</strong> {{ page.date | date: "%B %d, %Y %I:%M %p %Z" }}<br>
-            <strong>Ends:</strong> {{ page.end_date | date: "%B %d, %Y %I:%M %p %Z" }}
-          </p>
-          {% include page__meta.html %}
         </header>
+        <p class="event-dates">
+          <strong>Starts:</strong> {{ page.date | date: "%B %d, %Y %I:%M %p %Z" }}<br>
+          <strong>Ends:</strong> {{ page.end_date | date: "%B %d, %Y %I:%M %p %Z" }}
+        </p>
+        {% include page__meta.html %}
       {% endunless %}
 
       {% if venue %}
@@ -56,6 +50,16 @@ layout: default
           <br />{{ page.location }}</p>
         </section>
       {% endif %}
+
+      <section class="event-rsvp">
+        <p>
+          <a href="{{ page.rsvp_url }}" class="btn btn--primary" style="display: block; width: 100%; text-align: center;" target="_blank" rel="noopener noreferrer">
+            {{ page.rsvp_text | default: "RSVP" }}
+          </a>
+        </p>
+      </section>      
+
+      <p>{{ page.description }}</p>
 
       <section class="page__content event-description" itemprop="text">
         <div class="event-photo">
@@ -71,14 +75,14 @@ layout: default
         
         {% assign venue = site.data.venues[page.venue] %}
 
-      {{ "## Getting There" | markdownify }}
       {% if venue %}
+        {{ "## Getting There" | markdownify }}
         {% for transport in venue.getting_there %}
           <p><strong>{{ transport.label }}<br /> </strong>{{ transport.detail }}</p>
         {% endfor %}
 
         {% if venue.note %}
-          <p>📝 <strong>Note:</strong> {{ venue.note }}</p>
+          <p>📝 {{ venue.note }}</p>
         {% endif %}
       {% endif %}
 
