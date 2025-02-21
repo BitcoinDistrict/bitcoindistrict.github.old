@@ -9,7 +9,8 @@ venue: "George Washington University (Ames Hall B101)"
 location: "2100 Foxhall Rd NW, Washington, DC 20007, USA"
 layout: event
 photo: "/assets/img/events/gladstein-hrf-gw.jpg"
-og_image: "/assets/img/events/gladstein-hrf-gw.jpg"
+header: 
+    og_image: "/assets/img/events/gladstein-hrf-gw.jpg"
 categories:
     - events
     - bookclub
