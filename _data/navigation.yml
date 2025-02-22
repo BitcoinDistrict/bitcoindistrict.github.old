@@ -20,6 +20,8 @@ events:
         url: /conferences/
       - title: "Coffee & Bitcoin"
         url: /coffee/
+      - title: "Guest Speakers"
+        url: /speakers/
       - title: "Meetups"
         url: /meetups/
 

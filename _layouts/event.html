@@ -18,10 +18,18 @@ layout: default
   {% include sidebar.html %}
 
   <article class="page event-page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
-    {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
-    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+    {% if page.title %}
+      <meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">
+    {% endif %}
+    {% if page.excerpt %}
+      <meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">
+    {% endif %}
+    {% if page.date %}
+      <meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">
+    {% endif %}
+    {% if page.last_modified_at %}
+      <meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">
+    {% endif %}
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
@@ -36,12 +44,10 @@ layout: default
       {% endunless %}
 
       {% if venue %}
-      <p><strong>{{ venue.name }}</strong>
-        <br />{{ venue.address }}</p>
+        <p><strong>{{ venue.name }}</strong><br>{{ venue.address }}</p>
       {% else %}
         <section class="event-venue">
-          <p><strong>{{ page.venue }}</strong>
-          <br />{{ page.location }}</p>
+          <p><strong>{{ page.venue }}</strong><br>{{ page.location }}</p>
         </section>
       {% endif %}
 
@@ -51,53 +57,48 @@ layout: default
             {{ page.rsvp_text | default: "RSVP" }}
           </a>
         </p>
-      </section>      
+      </section>
 
       <p>{{ page.description }}</p>
 
       <section class="page__content event-description" itemprop="text">
-        <p>
-          {% if page.header.overlay_color or page.header.overlay_image %}
-            {% include page__hero.html %}
-          {% elsif page.header.image %}
-            <img src="{{ page.header.image | relative_url }}" alt="{{ page.title | escape }}" style="max-width: 100%; height: auto;">
-          {% elsif page.header.video.id and page.header.video.provider %}
-            {% include page__hero_video.html %}
-          {% endif %}
-        </p>
-        <section class="page__content event-description" itemprop="text">
-          {{ content }}
-        </section>
-        
-        {% assign venue = site.data.venues[page.venue] %}
-
+        {% if page.header.overlay_color or page.header.overlay_image %}
+          {% include page__hero.html %}
+        {% elsif page.header.image %}
+          <img src="{{ page.header.image | relative_url }}" alt="{{ page.title | escape }}" style="max-width: 100%; height: auto;">
+        {% elsif page.header.video.id and page.header.video.provider %}
+          {% include page__hero_video.html %}
+        {% endif %}
+      </section>
+      
+        <p>{{ content }}</p>
+      
       {% if venue %}
         {{ "## Getting There" | markdownify }}
         {% for transport in venue.getting_there %}
-          <p><strong>{{ transport.label }}<br /> </strong>{{ transport.detail }}</p>
+          <strong>{{ transport.label }}</strong><br>
+          {{ transport.detail }}<br><br>
         {% endfor %}
-
         {% if venue.note %}
           <p>📝 {{ venue.note }}</p>
         {% endif %}
       {% endif %}
+      
 
-        <!-- RSVP Link Section -->
-        {% if page.rsvp_url %}
-          <section class="event-rsvp">
-            <p>
-              <a href="{{ page.rsvp_url }}" class="btn btn--primary" style="display: block; width: 100%; text-align: center;" target="_blank" rel="noopener noreferrer">RSVP</a>
-            </p>
-          </section>
-        {% endif %}
-
-        {% if page.link %}
-          <div>
-            <a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a>
-          </div>
-        {% endif %}
+      <section class="event-rsvp2">
+        <p>
+          <a href="{{ page.rsvp_url }}" class="btn btn--primary" style="display: block; width: 100%; text-align: center;" target="_blank" rel="noopener noreferrer">
+            {{ page.rsvp_text | default: "RSVP" }}
+          </a>
+        </p>
       </section>
 
+      {% if page.link %}
+        <div>
+          <a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a>
+        </div>
+      {% endif %}
+      
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
@@ -109,8 +110,6 @@ layout: default
       {% if page.share %}
         {% include social-share.html %}
       {% endif %}
-
-      {% comment %}{% include post_pagination.html %}{% endcomment %}
     </div>
 
     {% if site.comments.provider and page.comments %}
