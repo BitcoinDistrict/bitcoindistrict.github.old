@@ -3,7 +3,12 @@ title: Book Club
 layout: single
 permalink: /bookclub/
 category: bookclub
+header:
+  image: /assets/img/headers/bookclub.jpg
+  og_image: /assets/img/headers/bookclub.jpg
 ---
+
+![Bitcoin Book Club]({{ page.header.image }})  
 
 If you're interested in reading with us, register for one of our monthly book club events below.
 

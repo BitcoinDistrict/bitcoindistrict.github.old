@@ -1,12 +1,16 @@
 ---
-title: Speakers
+title: Guest Speakers
 layout: single
 permalink: /speakers/
 category: speakers
+header:
+  image: /assets/img/dc/dc-aerial.jpg
+  og_image: /assets/img/dc/dc-aerial.jpg
 ---
 
-Bitcoin Speaker events happening in the DMV area.
+![Washington DC]({{ page.header.image }})   
 
+Events featuring guest speakers happening in the District. 
 
 {% assign upcoming_events = site.posts | where: "tags", "speaker" | where_exp: "post", "post.date > site.time" | sort: "date" %}
 {% assign past_events = site.posts | where: "tags", "speaker" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse%}

@@ -3,15 +3,17 @@ title: Conferences
 layout: single
 permalink: /conferences/
 category: conferences
+header:
+  image: /assets/img/dc/kennedy.jpg
+  og_image: /assets/img/dc/kennedy.jpg
 ---
 
-Bitcoin Conferences happening in the DMV area.
-
+![Kennedy Center]({{ page.header.image }})  
 
 {% assign upcoming_events = site.posts | where: "categories", "conferences" | where_exp: "post", "post.date > site.time" | sort: "date" %}
 {% assign past_events = site.posts | where: "categories", "conferences" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse%}
 
-### Upcoming Events
+### Upcoming Conferences
 {% if upcoming_events.size > 0 %}
   <div class="events-list">
     {% for post in upcoming_events %}
@@ -24,7 +26,7 @@ Bitcoin Conferences happening in the DMV area.
   <p>No upcoming events found.</p>
 {% endif %}
 
-### Past Events
+### Past Conferences
 {% if past_events.size > 0 %}
   <div class="events-list">
     {% for post in past_events %}

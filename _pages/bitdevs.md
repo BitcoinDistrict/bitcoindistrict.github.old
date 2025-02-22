@@ -4,11 +4,16 @@ layout: single
 permalink: /bitdevs/
 category: bitdevs
 author: DC BitDevs
+header:
+  image: /assets/img/og/bitdevs-og.jpg
+  og_image: /assets/img/og/bitdevs-og.jpg
 sidebar:
   - nav: 
     - events
     - bitdevs
 ---
+
+![DC BitDevs]({{ page.header.image }})   
 
 ## About BitDevs
 BitDevs is a community for those interested in discussing and participating in the research and development of Bitcoin and related protocols. You can be well versed with or new to the topics, all are welcome.

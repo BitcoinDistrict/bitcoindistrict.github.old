@@ -9,6 +9,7 @@ Run bundle exec jekyll serve
 Go to http://localhost:4000
 
 ## Making a Post
-To make a new post, make a new file in _posts/ with a title of YYYY-MM-DD-title-goes-here. At the top of the file you'll want to provide the following information:
+To make a new post, make a new file in _posts/ with a title of YYYY-MM-DD-title-goes-here. At the top of the file you'll want to provide the following information in the front matter.
 
-Further instructions to follow.
+
+
