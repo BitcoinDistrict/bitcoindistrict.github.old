@@ -1,7 +1,7 @@
 ---
 title: "BitcoinDay Tysons"
-date: 2025-09-27 09:00:00
-end_date: 2025-09-27 18:00:00
+date: 2025-09-27 09:00:00 -04:00
+end_date: 2025-09-27 18:00:00  -04:00
 rsvp_url: "https://bitcoinday.io/tysons25"
 description: "BitcoinDay isn't just an event, it's an opportunity to increase your understanding of Bitcoin, connect with experts and influencers, and amplify your impact on the sound money revolution."
 venue: "Strategy HQ"
