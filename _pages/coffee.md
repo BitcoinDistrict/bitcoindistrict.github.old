@@ -1,5 +1,6 @@
 ---
 title: Coffee & Bitcoin
+description: "Coffee & Bitcoin meetups in the greater DMV metro area."
 layout: single
 permalink: /coffee/
 category: coffee

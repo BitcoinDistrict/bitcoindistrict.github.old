@@ -1,5 +1,6 @@
 ---
 title: About Us
+description: "About Bitcoin District"
 permalink: /about/
 layout: single
 ---

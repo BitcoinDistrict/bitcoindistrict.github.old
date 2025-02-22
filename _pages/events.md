@@ -1,5 +1,6 @@
 ---
 title: Events in the District
+description: "Bitcoin events in the DMV greater metro area."
 layout: single
 permalink: /events/
 category: events

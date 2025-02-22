@@ -1,5 +1,6 @@
 ---
 title: DC BitDevs
+description: "DC BitDevs technical community"
 layout: single
 permalink: /bitdevs/
 category: bitdevs

@@ -2,6 +2,7 @@
 title: Bitcoin Community Meetups
 permalink: /meetups/
 layout: single
+description: "Meetup groups in the DMV greater metro area."
 ---
 
 These are the Bitcoin meetups in the DC, Maryland & Virginia greater metro area. Let us know if we're missing any.

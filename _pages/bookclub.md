@@ -1,5 +1,6 @@
 ---
 title: Book Club
+description: "Bitcoin District Book Club"
 layout: single
 permalink: /bookclub/
 category: bookclub

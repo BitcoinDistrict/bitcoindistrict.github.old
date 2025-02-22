@@ -1,6 +1,7 @@
 ---
 layout: splash
 title: "Welcome to Bitcoin District"
+description: "A network of Bitcoiners living and working in the DC, Maryland & Virginia (DMV) area seeking to network, socialize & collaborate with other Bitcoiners."
 permalink: /
 hidden: true
 header:

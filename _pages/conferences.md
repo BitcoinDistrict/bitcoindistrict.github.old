@@ -1,11 +1,12 @@
 ---
 title: Conferences
 layout: single
+description: "Bitcoin conferences in the DMV greater metro area."
 permalink: /conferences/
 category: conferences
 header:
-  image: /assets/img/dc/kennedy.jpg
-  og_image: /assets/img/dc/kennedy.jpg
+  image: /assets/img/dc/dc-aerial.jpg
+  og_image: /assets/img/dc/dc-aerial.jpg
 ---
 
 ![Kennedy Center]({{ page.header.image }})  

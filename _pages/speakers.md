@@ -1,5 +1,6 @@
 ---
 title: Guest Speakers
+description: "Guest speaker events in the greater DMV metro area."
 layout: single
 permalink: /speakers/
 category: speakers
