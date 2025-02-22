@@ -18,7 +18,7 @@ header:
   <div class="events-list">
     {% for post in upcoming_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.venue }})
+        {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.venue }})
       </section>
     {% endfor %}
   </div>
@@ -31,7 +31,7 @@ header:
   <div class="events-list">
     {% for post in past_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.venue}})
+        {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.venue}})
       </section>
     {% endfor %}
   </div>

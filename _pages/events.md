@@ -22,7 +22,7 @@ Below are all of the Bitcoin events in the greater DMV area.
         {% endif %}
   {% endfor %}
   <section class="event">
-    {{ icon_string }} {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a>
+    {{ icon_string }} {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
   </section>
     {% endfor %}
   </div>
@@ -43,7 +43,7 @@ Below are all of the Bitcoin events in the greater DMV area.
         {% endif %}
   {% endfor %}
   <section class="event">
-    {{ icon_string }} {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a>
+    {{ icon_string }} {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
   </section>
     {% endfor %}
   </div>

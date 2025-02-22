@@ -20,7 +20,7 @@ Join us for a "Coffee & Bitcoin" meetup where we'll talk about what's happening 
   <div class="events-list">
     {% for post in upcoming_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>
@@ -33,7 +33,7 @@ Join us for a "Coffee & Bitcoin" meetup where we'll talk about what's happening 
   <div class="events-list">
     {% for post in past_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} > <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>

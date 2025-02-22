@@ -20,7 +20,7 @@ If you're interested in reading with us, register for one of our monthly book cl
   <div class="events-list">
     {% for post in upcoming_events %}
       <section class="event">
-        {{ post.date | date: "%B %d, %Y" }} >> <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.date | date: "%B %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>
@@ -35,7 +35,7 @@ These are books recommended by members. Each book links to the author's official
   <div class="events-list">
     {% for post in past_events %}
       <section class="event">
-        {{ post.date | date: "%B %d, %Y" }} >> <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.date | date: "%B %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>

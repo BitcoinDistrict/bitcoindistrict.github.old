@@ -27,7 +27,7 @@ BitDevs is a community for those interested in discussing and participating in t
   <div class="events-list">
     {% for post in upcoming_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} >> <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>
@@ -40,7 +40,7 @@ BitDevs is a community for those interested in discussing and participating in t
   <div class="events-list">
     {% for post in past_events %}
       <section class="event">
-        {{ post.date | date: "%b %d, %Y" }} >> <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>
