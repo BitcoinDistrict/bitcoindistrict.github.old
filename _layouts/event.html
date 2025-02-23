@@ -14,6 +14,8 @@ layout: default
   {% endunless %}
 {% endif %}
 
+<script src="{{ '/assets/js/copy-text.js' | relative_url }}"></script>
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -46,7 +48,6 @@ layout: default
       {% if page.address or page.venue %}
       <div class="event-address">
         <p>
-          <strong>Address:</strong> 
           {% if page.address %}
             <span class="copyable-text">{{ page.address | escape }}</span>
           {% elsif page.venue %}
