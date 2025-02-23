@@ -3,7 +3,7 @@ title: "Book Club: Abundance Through Scarcity"
 date: 2025-02-26 18:30:00 -05:00
 end_date: 2025-02-26 20:30:00 -05:00
 rsvp_url: "https://www.meetup.com/bitcoin-district/events/305562167"
-description: "The Bitcoin District Book Club will meet to discuss Abundance Through Scarcity by Ioni Appelberg!"
+description: "Check out the Bitcoin District Book Club. Join us as we meet every month to dive into new and exciting rabbit holes through reading Bitcoin related books!"
 venue: compass-1703h
 layout: event
 header:

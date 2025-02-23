@@ -1,7 +1,7 @@
 ---
 title: Conferences
 layout: single
-description: "Bitcoin conferences in the DMV greater metro area."
+description: "Discover upcoming Bitcoin conferences in the DC area. Get involved, learn more, and connect with Bitcoin educators, businesses & thought leaders."
 permalink: /conferences/
 category: conferences
 header:

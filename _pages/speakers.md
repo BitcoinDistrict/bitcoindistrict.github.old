@@ -1,6 +1,6 @@
 ---
 title: Guest Speakers
-description: "Guest speaker events in the greater DMV metro area."
+description: "Check out upcoming events with special guest speakers happening in the DC, Maryland & Virginia greater metro area."
 layout: single
 permalink: /speakers/
 category: speakers

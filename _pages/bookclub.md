@@ -1,6 +1,6 @@
 ---
 title: Book Club
-description: "Bitcoin District Book Club"
+description: "Check out the Bitcoin District Book Club. Join us as we meet every month to dive into new and exciting rabbit holes through reading Bitcoin related books!"
 layout: single
 permalink: /bookclub/
 category: bookclub

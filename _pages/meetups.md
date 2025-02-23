@@ -2,7 +2,7 @@
 title: Bitcoin Community Meetups
 permalink: /meetups/
 layout: single
-description: "Meetup groups in the DMV greater metro area."
+description: "Join vibrant Bitcoin meetup groups in the DC metro area. Connect with locals, share ideas, and dive into Bitcoin at events near you!"
 sidebar:
   - nav: 
     - events

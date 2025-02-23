@@ -3,6 +3,7 @@ title: Coin Selector
 layout: single
 permalink: /coin-selector/
 body_class: coin-selector-page
+description: "Choose a coin for a fun message."
 ---
 
 <div class="coin-selector-page">

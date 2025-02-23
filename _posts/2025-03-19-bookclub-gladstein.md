@@ -3,7 +3,7 @@ title: "Book Club: Hidden Repression"
 date: 2025-03-19 18:30:00 -04:00
 end_date: 2025-03-19 20:30:00 -04:00
 rsvp_url: "https://www.meetup.com/bitcoin-district/events/305917608"
-description: "The Bitcoin District Book Club will meet to discuss Hidden Repression by Alex Gladstein!"
+description: "Check out the Bitcoin District Book Club. Join us as we meet every month to dive into new and exciting rabbit holes through reading Bitcoin related books!"
 venue: compass-1703h
 layout: event
 header:

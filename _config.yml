@@ -21,7 +21,7 @@ title                    : "Bitcoin District"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Bitcoin District"
-description              : "Network of Bitcoiners in the DMV greater metro area."
+description              : "Join a growing network of Bitcoiners living and working in the greater DC-Maryland-Virginia metro area. Newcomers are always welcome!"
 url                      : "https://bitcoindistrict.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"

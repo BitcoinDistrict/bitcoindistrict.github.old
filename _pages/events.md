@@ -1,6 +1,6 @@
 ---
 title: Events in the District
-description: "Bitcoin events in the DMV greater metro area."
+description: "Find Bitcoin-only events in the DC metro area. Meet others, learn more, and dive into Bitcoin in the nation's capital & surrounding cities."
 header:
   image: /assets/img/dc/dc-aerial.jpg
   og_image: /assets/img/dc/dc-aerial.jpg

@@ -4,7 +4,7 @@ date: 2025-03-27 18:30:00 -04:00
 end_date: 2025-03-27 20:30:00 -04:00
 rsvp_url: "https://lu.ma/gq0rpxpd"
 rsvp_text: "Register on Luma"
-description: "Alex Gladstein will be in Washington DC to discuss his book Hidden Repression: How the IMF and World Bank Sell Exploitation as Development"
+description: "Alex Gladstein will be in Washington DC to discuss his book Hidden Repression: How the IMF and World Bank Sell Exploitation as Development."
 venue: gw-amesb101
 layout: event
 photo: "/assets/img/events/gladstein-hrf-gw.jpg"

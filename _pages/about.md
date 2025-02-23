@@ -1,6 +1,6 @@
 ---
 title: About Us
-description: "About Bitcoin District"
+description: "Bitcoin District is a network of Bitcoiners who live and work around the greater DC, Maryland and Virginia (DMV) metro area. Newcomers are always welcome!​"
 permalink: /about/
 layout: single
 ---
