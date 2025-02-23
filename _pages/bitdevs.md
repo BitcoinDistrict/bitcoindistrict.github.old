@@ -20,8 +20,8 @@ sidebar:
 BitDevs is a community for those interested in discussing and participating in the research and development of Bitcoin and related protocols. You can be well versed with or new to the topics, all are welcome.
 
 
-{% assign upcoming_events = site.posts | where: "categories", "bitdevs" | where_exp: "post", "post.date > site.time" | sort: "date" %}
-{% assign past_events = site.posts | where: "categories", "bitdevs" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse%}
+{% assign upcoming_events = site.posts | where: "categories", "bitdevs" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date > site.time" | sort: "date" %}
+{% assign past_events = site.posts | where: "categories", "bitdevs" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse%}
 
 ### Upcoming Events
 {% if upcoming_events.size > 0 %}

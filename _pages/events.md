@@ -8,8 +8,8 @@ category: events
 
 Below are all of the Bitcoin events in the greater DMV area.
 
-{% assign upcoming_events = site.posts | where: "categories", "events" | where_exp: "post", "post.date > site.time" | sort: "date" %}
-{% assign past_events = site.posts | where: "categories", "events" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse%}
+{% assign upcoming_events = site.posts | where: "categories", "events" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date > site.time" | sort: "date" %}
+{% assign past_events = site.posts | where: "categories", "events" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse %}
 
 ### Upcoming Events
 {% if upcoming_events.size > 0 %}

@@ -7,14 +7,17 @@ category: bookclub
 header:
   image: /assets/img/headers/bookclub.jpg
   og_image: /assets/img/headers/bookclub.jpg
+sidebar:
+  - nav: 
+    - events
 ---
 
 ![Bitcoin Book Club]({{ page.header.image }})  
 
 If you're interested in reading with us, register for one of our monthly book club events below.
 
-{% assign upcoming_events = site.posts | where: "categories", "bookclub" | where_exp: "post", "post.date > site.time" | sort: "date" %}
-{% assign past_events = site.posts | where: "categories", "bookclub" | where_exp: "post", "post.date <= site.time" | sort: "date" %}
+{% assign upcoming_events = site.posts | where: "categories", "bookclub" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date > site.time" | sort: "date" %}
+{% assign past_events = site.posts | where: "categories", "bookclub" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date <= site.time" | sort: "date" %}
 
 ## Upcoming Events
 {% if upcoming_events.size > 0 %}
