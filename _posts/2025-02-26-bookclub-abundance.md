@@ -23,6 +23,4 @@ In Abundance Through Scarcity, [Ioni Appelberg](https://x.com/IoniAppelberg), a 
 
 The book traces a path from the forgotten empires of the past to the anticipated civilizations of the future. It navigates through the shackles of traditional slavery, shedding light on the prisons of modern-day cubicles.  
 
-Buy the book on [BitcoinBook.shop](http://bitcoinbook.shop) or on [Amazon](https://a.co/d/eTddH7N).
-
-Be sure to check out the special Bitcoin Blend, an El Salvador single-origin roast from our host Compass Coffee. You can order from [their website](https://www.compasscoffee.com/products/bitcoin-blend) and you can even pay in Bitcoin!  
+Buy the book on [BitcoinBook.shop](http://bitcoinbook.shop) or on [Amazon](https://a.co/d/eTddH7N).  

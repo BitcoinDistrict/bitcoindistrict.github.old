@@ -1,12 +1,13 @@
 ---
 layout: splash
 title: "Welcome to Bitcoin District"
-description: "A network of Bitcoiners living and working in the DC, Maryland & Virginia (DMV) area seeking to network, socialize & collaborate with other Bitcoiners."
+description: "We're a network of individuals living and working in the DC, Maryland & Virginia (DMV) area seeking to network, socialize & collaborate with other Bitcoiners."
 permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
   overlay_image: /assets/img/feature/dc_1600x524.jpg
+  og_image: /assets/img/og/bd-og.jpg
 excerpt: >
   Bitcoin District is a network of Bitcoiners living and working in the DC, Maryland & Virginia (DMV) area seeking to network, socialize & collaborate with other Bitcoiners.<br />
 feature_row:
@@ -36,6 +37,5 @@ feature_row:
 # Get Involved
 
 The best way to get plugged in to the Bitcoin District network is to come to an event and connect with other Bitcoiners. Find a Meetup group near you!
-
 
 {% include feature_row %}

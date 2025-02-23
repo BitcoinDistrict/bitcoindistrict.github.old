@@ -24,6 +24,4 @@ Hidden Repression by Alex Gladstein explores the intersection of authoritarian r
 📙 Buy the book on [BitcoinBook.shop](http://bitcoinbook.shop/) or on [Amazon](https://a.co/d/eTddH7N).  
 
 👉 Follow Alex on [Nostr](http://primal.net/gladstein) & [Twitter/X](https://x.com/gladstein)  
-👉 Visit the [Human Rights Foundation](https://hrf.org/)  
-
-Be sure to check out the special Bitcoin Blend, an El Salvador single-origin roast from our host Compass Coffee. You can order from [their website](https://www.compasscoffee.com/products/bitcoin-blend) and you can even pay in Bitcoin!  
+👉 Visit the [Human Rights Foundation](https://hrf.org/)    

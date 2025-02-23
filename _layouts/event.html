@@ -108,16 +108,21 @@ layout: default
       
       <p>{{ content }}</p>
       
-      {% if venue %}
-        {{ "## Getting There" | markdownify }}
-        {% for transport in venue.getting_there %}
-          <strong>{{ transport.label }}</strong><br />
-          {{ transport.detail }}<br />
-        {% endfor %}
-        {% if venue.note %}
-          <p>📝 {{ venue.note }}</p>
+      {% if page.venue %}
+        {% assign venue = site.data.venues | where: "slug", page.venue | first %}
+        {% if venue %}
+          {{ "## Getting There" | markdownify }}
+          <dl>
+            {% for transport in venue.getting_there %}
+              <dt><strong>{{ transport.label }}</strong></dt>
+              <dd>{{ transport.detail }}</dd>
+            {% endfor %}
+          </dl>
+          {% if venue.note %}
+            <p>📝 {{ venue.note }}</p>
+          {% endif %}
         {% endif %}
-      {% endif %}     
+      {% endif %}
 
       <section class="event-rsvp2">
         <p>

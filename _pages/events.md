@@ -1,10 +1,15 @@
 ---
 title: Events in the District
 description: "Bitcoin events in the DMV greater metro area."
+header:
+  image: /assets/img/dc/dc-aerial.jpg
+  og_image: /assets/img/dc/dc-aerial.jpg
 layout: single
 permalink: /events/
 category: events
 ---
+
+![Bitcoin District Events]({{ page.header.image }})  
 
 Below are all of the Bitcoin events in the greater DMV area.
 
