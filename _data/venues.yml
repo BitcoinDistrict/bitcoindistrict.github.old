@@ -1,5 +1,6 @@
 Compass Coffee (1703 H St NW):
   name        : "Compass Coffee (1703 H St NW)"
+  slug        : compass-1703h
   address     : "1703 H St NW, Washington, DC 20006, USA"
   getting_there:
     - label: "Farragut West Metro"
@@ -12,6 +13,7 @@ Compass Coffee (1703 H St NW):
 
 Strategy HQ:
   name        : "Strategy HQ"
+  slug        : strategyhq
   address     : "1850 Towers Cres Plaza, Tysons, VA 22182, USA"
   getting_there:
     - label: "Tysons Metro"
@@ -29,6 +31,7 @@ Strategy HQ:
 
 Compass Coffee (Falls Church):
   name        : "Compass Coffee (Falls Church)"
+  slug        : compass-7393lee
   address     : "7393 Lee Hwy, Falls Church, VA 22042, USA"
   getting_there:
     - label: "Parking"
@@ -40,6 +43,7 @@ Compass Coffee (Falls Church):
 
 George Washington University (Ames Hall B101):
   name        : "George Washington University, Ames Hall B101"
+  slug        : gw-amesb101
   address     : "2100 Foxhall Rd NW, Washington, DC 20007, USA"
   getting_there:
     - label: "Parking"

@@ -43,34 +43,12 @@ layout: default
         {% include page__meta.html %}
       {% endunless %}
 
-      {% if page.address or page.venue %}
-      <div class="event-address">
-        <p>
-          <strong>Address:</strong> 
-          {% if page.address %}
-            <span class="copyable-text">{{ page.address | escape }}</span>
-          {% elsif page.venue %}
-            {% assign venue = site.data.venues | where: "slug", page.venue | first %}
-            {% if venue and venue.address %}
-              <span class="copyable-text">{{ venue.address | escape }}</span>
-            {% else %}
-              <span class="copyable-text">{{ venue.name | escape }} (Address TBD)</span>
-            {% endif %}
-          {% endif %}
-          <i class="fas fa-copy copy-icon" title="Copy text"></i>
-        </p>
-      </div>
-      
-      <style>
-      .copy-icon {
-        margin-left: 10px;
-        cursor: pointer;
-        color: #666;
-      }
-      .copy-icon:hover {
-        color: #000;
-      }
-      </style>
+      {% if venue %}
+        <p><strong>{{ venue.name }}</strong><br>{{ venue.address }}</p>
+      {% else %}
+        <section class="event-venue">
+          <p><strong>{{ page.venue }}</strong><br>{{ page.location }}</p>
+        </section>
       {% endif %}
 
       <section class="event-rsvp">

@@ -5,7 +5,7 @@ end_date: 2025-01-25 13:00:00 -0500
 rsvp_url: "https://www.meetup.com/bitcoin-district/events/305562485"
 description: "Join Bitcoin District as we participate in the Running Bitcoin Challenge to honor Hal Finney and raise funds to help find a cure for ALS."
 venue: "Smithsonian Metro Station (Outside)"
-location: "VXQC+JM, Washington, DC, USA"
+address: "VXQC+JM, Washington, DC, USA"
 layout: event
 header:
   image: /assets/img/events/runningbitcoin.jpg
