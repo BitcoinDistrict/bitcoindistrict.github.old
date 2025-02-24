@@ -1,8 +1,8 @@
 ---
 name: Bitcoin Book Club Discussion
 about: Stack sats and knowledge—discuss our monthly Bitcoin read
-title: '[Month Year] Bitcoin Book Discussion: [Book Title]'
-labels: discussion, book-club
+title: '[Month Year] Book Club Discussion: [Book Title]'
+labels: 'book club'
 assignees: ''
 ---
 
