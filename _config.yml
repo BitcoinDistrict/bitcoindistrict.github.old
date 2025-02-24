@@ -35,7 +35,7 @@ copyright                : # "copyright" name, defaults to site.title
 copyright_url            : /coin-selector # "copyright" URL, defaults to site.url
 future                   : true # By default, Jekyll does not publish posts dated in the future. 
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : giscus # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
