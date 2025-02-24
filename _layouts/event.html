@@ -162,8 +162,11 @@ comments: true
   </article>
 
   {% if page.id and page.related %}
-    {% include page__related.html posts=site.related_posts %}
+    {% assign filtered_posts = site.related_posts | where_exp: "post", "post.draft != true" %}
+    {% include page__related.html posts=filtered_posts %}
   {% elsif page.id and page.related %}
-    {% include page__related.html posts=site.posts %}
+    {% assign filtered_posts = site.posts | where_exp: "post", "post.draft != true" %}
+    {% include page__related.html posts=filtered_posts %}
   {% endif %}
+
 </div>
