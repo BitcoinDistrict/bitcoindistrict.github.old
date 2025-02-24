@@ -17,7 +17,7 @@ assignees: ''
 Drop some questions below to spark the conversation—think about Bitcoin’s principles, tech, or philosophy. Here are starters to replace:
 
 1. [e.g., How does the author explain Bitcoin’s role as sound money?]
-2. [e.g., What did you think of the take on decentralization or the blockchain?]
+2. [e.g., What did you think of the take on decentralization or self-sovereignty?]
 3. [e.g., Did this book change your view on HODLing or running a node?]
 
 ### Bitcoiner Topics
