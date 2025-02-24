@@ -24,7 +24,7 @@ name                     : "Bitcoin District"
 description              : "Join a growing network of Bitcoiners living and working in the greater DC-Maryland-Virginia metro area. Newcomers are always welcome!"
 url                      : "https://bitcoindistrict.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : bitcoindistrict/bitcoindistrict.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : BitcoinDistrict/bitcoindistrict.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/img/logos/bd.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -49,10 +49,10 @@ comments:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
   giscus:
-    repo                 : bitcoindistrict/bitcoindistrict.github.io
+    repo                 : "BitcoinDistrict/bitcoindistrict.github.io"
     repo_id              : R_kgDON6oXrw # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
+    category_name        : Comments # Full text name of the category
+    category_id          : DIC_kwDON6oXr84CnSwh # Shown during giscus setup at https://giscus.app
     discussion_term      : # "pathname" (default), "url", "title", "og:title"
     reactions_enabled    : # '1' for enabled (default), '0' for disabled
     theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
