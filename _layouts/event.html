@@ -53,21 +53,21 @@ layout: default
             {% if page.venue and venue_data %}
               {% comment %} Scenario 1 & 2: Venue matches venues.yml, use its name and address {% endcomment %}
               🗺️ <strong>{{ venue_data.name | escape }}</strong><br />
-              <span class="copyable-text">📍 {{ venue_data.address | escape }}</span>
+              📍 <span class="copyable-text">{{ venue_data.address | escape }}</span>
             {% elsif page.venue and page.address %}
               {% comment %} Scenario 3: Venue not in venues.yml, use post's venue and address {% endcomment %}
               🗺️ <strong>{{ page.venue | escape }}</strong><br />
-              <span class="copyable-text">📍 {{ page.address | escape }}</span>
+              📍 <span class="copyable-text"> {{ page.address | escape }}</span>
             {% elsif page.venue %}
               {% comment %} Scenario 3 (partial): Venue not in venues.yml, no address {% endcomment %}
               🗺️ <strong>{{ page.venue | escape }}</strong><br />
-              <span class="copyable-text">📍 Address TBD</span>
+              📍 <span class="copyable-text"> Address TBD</span>
             {% elsif page.address %}
               {% comment %} Scenario 5: No venue, but address exists {% endcomment %}
-              <span class="copyable-text">📍 {{ page.address | escape }}</span>
+              📍 <span class="copyable-text"> {{ page.address | escape }}</span>
             {% else %}
               {% comment %} Scenario 4: No venue or address {% endcomment %}
-              <span class="copyable-text">📍 Venue not specified</span>
+              📍 <span class="copyable-text"> Venue not specified</span>
             {% endif %}
             
             <i class="fas fa-copy copy-icon" title="Copy text"></i>
