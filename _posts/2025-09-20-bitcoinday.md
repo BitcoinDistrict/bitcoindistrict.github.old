@@ -20,4 +20,6 @@ tags:
 
 BitcoinDay is a localized, single-day, fast & focused Bitcoin-only gathering that aims to maximize signal and connectivity, and minimize echo and noise. It is designed to facilitate connections between Bitcoin influencers and plebs. We attract high-caliber, expert speakers to spend the day with us and interact with participants both on and off the stage. We work to maintain a local, small gathering environment where everyone has a chance to interact with each other. Our goal is to facitate connections that will last a lifetime and inspire positive action that accelerates the transition to a Bitcoin economy.  
 
-🌐 Official Website: [https://bitcoinday.io/tysons25](https://bitcoinday.io/tysons25)
+🌐 Official Website: [https://bitcoinday.io/tysons25](https://bitcoinday.io/tysons25)  
+▶️ YouTube Channel: [BitcoinDay YouTube](https://www.youtube.com/@bitcoindayio)  
+🐦 Follow [BitcoinDayIO on X](https://x.com/bitcoindayio)  
