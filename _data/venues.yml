@@ -47,8 +47,6 @@ George Washington University (Ames Hall B101):
   address     : "2100 Foxhall Rd NW, Washington, DC 20007, USA"
   getting_there:
     - label: "Parking"
-      detail: "🚗 Parking Instructions TBD"
-    - label: "Bus"
-      detail: "🚍 Bus Stop Instructions TBD"
+      detail: "🚗 Garage parking available at the GWU Mount Vernon Parking Lot. Up to 3hrs is free and the garage closes at 11PM."
   note: >
    Thank you George Washington University for hosting.
