@@ -8,8 +8,8 @@ Compass Coffee (1703 H St NW):
     - label: "Farragut North Metro"
       detail: "🔴 Farragut North Metro + 5 min walk"
     - label: "Street Parking"
-      detail: "Street parking is available in front of the café on H St."
-  note:    Be sure to check out the special <a href="https://www.compasscoffee.com/products/bitcoin-blend">Bitcoin Blend</a>, an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!
+      detail: "🚗 Street parking is available in front of the café on H St."
+  note:    Be sure to check out the special [Bitcoin Blend](https://www.compasscoffee.com/products/bitcoin-blend), an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!
 
 Strategy HQ:
   name        : "Strategy HQ"
@@ -39,7 +39,7 @@ Compass Coffee (Falls Church):
     - label: "Metro + Bus"
       detail: "🚆🚍 Dunn Loring Station (orange line) + bus to Lee Hwy & Lee Oaks Ct stop"
   note: >
-   Be sure to check out the special <a href="https://www.compasscoffee.com/products/bitcoin-blend">Bitcoin Blend</a>, an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!
+   Be sure to check out the special [Bitcoin Blend](https://www.compasscoffee.com/products/bitcoin-blend), an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!
 
 George Washington University (Ames Hall B101):
   name        : "George Washington University, Ames Hall B101"
@@ -48,5 +48,31 @@ George Washington University (Ames Hall B101):
   getting_there:
     - label: "Parking"
       detail: "🚗 Garage parking available at the GWU Mount Vernon Parking Lot. Up to 3hrs is free and the garage closes at 11PM."
+    - label: "Public Transportation"
+      detail: "This venue is not very metro accessible."
   note: >
    Thank you George Washington University for hosting.
+
+Compass Coffee (1301 K St NW):
+  name        : "Compass Coffee (1301 K St NW)"
+  slug        : compass-1301k
+  address     : "1301 K St NW, Washington, DC 20005, USA"
+  getting_there:
+    - label: "McPherson Square Metro"
+      detail: "🔵🟠⚪ McPherson Square Metro Station + 5 mins walk"
+    - label: "Metro Center Metro"
+      detail: "🔴 Metro Center Station + 10 mins walk"
+    - label: "Street Parking"
+      detail: "Street parking may be available in front of the café and there are many parking garages within a few minutes walk"
+  note: Be sure to check out the special [Bitcoin Blend](https://www.compasscoffee.com/products/bitcoin-blend), an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!
+
+Compass Coffee (Georgetown):
+  name        : "Compass Coffee (Georgetown)"
+  slug        : compass-georgetown
+  address     : "1351 Wisconsin Ave NW, Washington, DC 20007, USA"
+  getting_there:
+    - label: "Metro & Walk"
+      detail: "🚇 Foggy Bottom or Dupont Circle Metro + 20-30m walk"
+    - label: "Street Parking"
+      detail: "🚗 Paid street parking should be available nearby"
+  note: Be sure to check out the special [Bitcoin Blend](https://www.compasscoffee.com/products/bitcoin-blend), an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!

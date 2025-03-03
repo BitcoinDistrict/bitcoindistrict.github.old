@@ -17,14 +17,14 @@ sidebar:
 If you're interested in reading with us, register for one of our monthly book club events below.
 
 {% assign upcoming_events = site.posts | where: "categories", "bookclub" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date > site.time" | sort: "date" %}
-{% assign past_events = site.posts | where: "categories", "bookclub" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date <= site.time" | sort: "date" %}
+{% assign past_events = site.posts | where: "categories", "bookclub" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse %}
 
 ## Upcoming Events
 {% if upcoming_events.size > 0 %}
   <div class="events-list">
     {% for post in upcoming_events %}
       <section class="event">
-        {{ post.date | date: "%B %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
+        📙 {{ post.date | date: "%B %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>
@@ -39,10 +39,10 @@ These are books recommended by members. Each book links to the author's official
   <div class="events-list">
     {% for post in past_events %}
       <section class="event">
-        {{ post.date | date: "%B %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
+        📕 {{ post.date | date: "%B %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
-  </div>
+  </div><br><br>
 {% else %}
   <p>No past events found.</p>
 {% endif %}
@@ -54,7 +54,7 @@ These are books recommended by members. Each book links to the author's official
     <tr>
       <th onclick="sortTable(0)">Title</th>
       <th onclick="sortTable(1)">Author</th>
-      <th onclick="sortTable(2)">Date</th>
+      <th onclick="sortTable(2)" style="width: auto; white-space: nowrap;">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -62,7 +62,7 @@ These are books recommended by members. Each book links to the author's official
       <tr>
         <td><a href="{{ book.link }}" target="_blank">{{ book.title }}</a></td>
         <td>{{ book.author }}</td>
-        <td>{{ book.date }}</td>
+        <td style="width: auto; white-space: nowrap;">{{ book.date }}</td>
       </tr>
     {% endfor %}
   </tbody>
