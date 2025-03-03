@@ -27,7 +27,7 @@ Proceeds from this event support the Human Rights Foundation.
 
 Join the [**Bitcoin District Book Club**](https://www.meetup.com/bitcoin-district/events/305917608) on Wednesday, March 19th to discuss Alex's book before this event!
 
-📙 Buy the book at the [Bitcoin Magazine Book Store](https://store.bitcoinmagazine.com/collections/books/products/hidden-repression)  
+Buy the book on [Amazon](https://a.co/d/3kURdKc) or at the [Bitcoin Magazine Book Store](https://store.bitcoinmagazine.com/collections/books/products/hidden-repression)  
 
 👉 Follow Alex on [Nostr](http://primal.net/gladstein) & [Twitter/X](https://x.com/gladstein)  
 👉 Visit the [Human Rights Foundation](https://hrf.org/)
