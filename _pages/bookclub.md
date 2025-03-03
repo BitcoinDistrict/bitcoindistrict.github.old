@@ -24,7 +24,7 @@ If you're interested in reading with us, register for one of our monthly book cl
   <div class="events-list">
     {% for post in upcoming_events %}
       <section class="event">
-        📙 {{ post.date | date: "%B %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
+        📙 {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
   </div>
@@ -33,21 +33,20 @@ If you're interested in reading with us, register for one of our monthly book cl
 {% endif %}
 
 ## Past Events
-These are books recommended by members. Each book links to the author's official website or to Amazon.
-
 {% if past_events.size > 0 %}
   <div class="events-list">
     {% for post in past_events %}
       <section class="event">
-        📕 {{ post.date | date: "%B %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
+        📕 {{ post.date | date: "%b %d, %Y" }} {{ site.data.ui-text[site.locale].event_date_separator }} <a href="{{ post.url }}">{{ post.title }}</a>
       </section>
     {% endfor %}
-  </div><br><br>
+  </div>
 {% else %}
   <p>No past events found.</p>
 {% endif %}
 
-# Book Club List
+## Book Club List
+These are books recommended by members. Each book links to the author's official website or to Amazon.  
 
 <table id="bookTable">
   <thead>
