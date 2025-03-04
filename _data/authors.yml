@@ -1,7 +1,7 @@
 # /_data/authors.yml
 Trey:
   name        : "Trey"
-  bio         : "Fix the money, fix the world!"
+  bio         : "Fix the money!"
   avatar      : "/assets/img/authors/trey.png"
   links:
     - label: "X/Twitter"

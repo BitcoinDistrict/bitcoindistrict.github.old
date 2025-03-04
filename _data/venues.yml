@@ -34,10 +34,10 @@ Compass Coffee (Falls Church):
   slug        : compass-7393lee
   address     : "7393 Lee Hwy, Falls Church, VA 22042, USA"
   getting_there:
-    - label: "Parking"
-      detail: "🚗 Ample parking at the shopping center"
-    - label: "Metro + Bus"
-      detail: "🚆🚍 Dunn Loring Station (orange line) + bus to Lee Hwy & Lee Oaks Ct stop"
+    - label: "🚗 Parking"
+      detail: "Ample parking at the shopping center"
+    - label: "🚇🚍 Metro + Bus"
+      detail: "Dunn Loring Station (orange line) + bus to Lee Hwy & Lee Oaks Ct stop"
   note: >
    Be sure to check out the special [Bitcoin Blend](https://www.compasscoffee.com/products/bitcoin-blend), an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!
 
@@ -46,10 +46,16 @@ George Washington University (Ames Hall B101):
   slug        : gw-amesb101
   address     : "2100 Foxhall Rd NW, Washington, DC 20007, USA"
   getting_there:
-    - label: "Parking"
-      detail: "🚗 Garage parking available at the GWU Mount Vernon Parking Lot. Up to 3hrs is free and the garage closes at 11PM."
-    - label: "Public Transportation"
-      detail: "This venue is not very metro accessible."
+    - label: "🚗 Garage Parking"
+      detail: > 
+        <ul>
+            <li> GWU Mount Vernon Parking Lot is underneath the outdoor tennis courts.</li>
+            <li> Turn onto Whitehaven Pkwy NW and into the GWU campus entrance next to the tennis courts. Turn left into the garage underneath the tennis courts.</li>
+            <li> Up to 3hrs is free and the garage closes at 11PM.</li>
+            <li> Ames hall is across the street from the garage.</li>
+        </ul>
+    - label: "🚇 Public Transportation"
+      detail: "This venue is not metro accessible."
   note: >
    Thank you George Washington University for hosting.
 
@@ -71,8 +77,8 @@ Compass Coffee (Georgetown):
   slug        : compass-georgetown
   address     : "1351 Wisconsin Ave NW, Washington, DC 20007, USA"
   getting_there:
-    - label: "Metro & Walk"
-      detail: "🚇 Foggy Bottom or Dupont Circle Metro + 20-30m walk"
-    - label: "Street Parking"
-      detail: "🚗 Paid street parking should be available nearby"
+    - label: "🚇 Metro & Walk"
+      detail: "Foggy Bottom or Dupont Circle Metro + 20-30m walk"
+    - label: "🚗 Street Parking"
+      detail: "Paid street parking should be available nearby"
   note: Be sure to check out the special [Bitcoin Blend](https://www.compasscoffee.com/products/bitcoin-blend), an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!
