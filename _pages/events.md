@@ -11,7 +11,7 @@ category: events
 
 ![Bitcoin District Events]({{ page.header.image }})  
 
-Below are all of the Bitcoin events in the greater DMV area.
+Below are many of the Bitcoin events in the greater DMV area. For a full list of events, be sure to check our [Meetup group](https://www.meetup.com/bitcoin-district).
 
 {% assign upcoming_events = site.posts | where: "categories", "events" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date > site.time" | sort: "date" %}
 {% assign past_events = site.posts | where: "categories", "events" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse %}
