@@ -30,6 +30,8 @@ Join the [**Bitcoin District Book Club**](https://www.meetup.com/bitcoin-distric
 
 Buy the book on [Amazon](https://a.co/d/3kURdKc) or at the [Bitcoin Magazine Book Store](https://store.bitcoinmagazine.com/collections/books/products/hidden-repression)  
 
+You can read the book in this [online Bitcoin Magazine article](https://bitcoinmagazine.com/culture/imf-world-bank-repress-poor-countries).  
+
 👉 Follow Alex on [Nostr](http://primal.net/gladstein) & [Twitter/X](https://x.com/gladstein)  
 👉 Visit the [Human Rights Foundation](https://hrf.org/)
 

@@ -11,7 +11,7 @@ category: events
 
 ![Bitcoin District Events]({{ page.header.image }})  
 
-Below are many of the Bitcoin events in the greater DMV area. For a full list of events, be sure to check our [Meetup group](https://www.meetup.com/bitcoin-district).
+Below is a list of Bitcoin-focused events in the Washington, DC metro area. While most events on this list are organized by us, we do make an effort to include events organized externally (like conferences & DC BitDevs). Be sure to join our [Meetup group](https://www.meetup.com/bitcoin-district) to get notified when we post new Bitcoin District events!
 
 {% assign upcoming_events = site.posts | where: "categories", "events" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date > site.time" | sort: "date" %}
 {% assign past_events = site.posts | where: "categories", "events" | where_exp: "post", "post.draft != true" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse %}

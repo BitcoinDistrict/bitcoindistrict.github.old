@@ -25,3 +25,7 @@ walk:
 speaker:
   name        : "Speaker"
   emoji       : 🎤
+
+online:
+  name        : "Online"
+  emoji       : 🌐
