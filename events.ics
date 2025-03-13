@@ -8,13 +8,38 @@ VERSION:2.0
 PRODID:-//BitcoinDistrict.org//Bitcoin Events in the DMV//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-{% for post in site.posts %}{% if post.draft != true %}{% if post.date >= site.time %}BEGIN:VEVENT
-UID:{{ post.uid | default: post.date | date_to_xmlschema }}-{{ post.title | slugify }}-bitcoindistrict.org
-DTSTAMP:{{ site.time | date_to_xmlschema }}
-DTSTART:{{ post.date | date_to_xmlschema }}
-{% if post.end_date %}DTEND:{{ post.end_date | date_to_xmlschema }}{% endif %}
-{%- if post.end_date -%}{%- else -%}{%- endif -%}SUMMARY:{{ post.title }}
-{% if post.venue %}{% assign venue = site.data.venues | values | where: "slug", post.venue | first %}{% if venue %}LOCATION:{{ venue.address }}{% endif %}{% endif %}
-{% if post.description %}DESCRIPTION:{{ post.description | strip_newlines | strip }}{% endif %}
-END:VEVENT
-{% endif %}{% endif %}{% endfor %}END:VCALENDAR
+{% for post in site.posts %}
+  {% if post.draft != true %}
+    {% if post.date >= site.time %}
+      BEGIN:VEVENT
+      UID:{{ post.uid | default: post.date | date_to_xmlschema }}-{{ post.title | slugify }}-bitcoindistrict.org
+      DTSTAMP:{{ site.time | date_to_xmlschema }}
+      DTSTART:{{ post.date | date_to_xmlschema }}
+      {% if post.end_date %}
+        DTEND:{{ post.end_date | date_to_xmlschema }}
+      {% endif %}
+      SUMMARY:{{ post.title }}
+      {% if post.venue %}
+        {% assign venue = site.data.venues | values | where: "slug", post.venue | first %}
+        {% if venue %}
+          LOCATION:{{ venue.address }}
+        {% endif %}
+      {% endif %}
+      {% if post.description %}
+        {% assign description = post.description | strip_newlines %}
+        {% assign lines = description | split: "\n" %}
+        {% for line in lines %}
+          {% assign line_length = line | size %}
+          {% if line_length > 75 %}
+            DESCRIPTION: {{ line | slice: 0, 75 }}
+            {{ line | slice: 75, line_length }}
+          {% else %}
+            DESCRIPTION: {{ line }}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      END:VEVENT
+    {% endif %}
+  {% endif %}
+{% endfor %}
+END:VCALENDAR
