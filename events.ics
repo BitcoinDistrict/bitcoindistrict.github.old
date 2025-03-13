@@ -29,10 +29,9 @@ METHOD:PUBLISH
         {% assign description = post.description | strip_newlines %}
         {% assign lines = description | split: "\n" %}
         {% for line in lines %}
-          {% assign line_length = line | size %}
-          {% if line_length > 75 %}
+          {% if line.size > 75 %}
             DESCRIPTION: {{ line | slice: 0, 75 }}
-            {{ line | slice: 75, line_length }}
+            {{ line | slice: 75, line.size }}
           {% else %}
             DESCRIPTION: {{ line }}
           {% endif %}
