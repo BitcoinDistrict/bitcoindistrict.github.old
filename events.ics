@@ -1,5 +1,6 @@
 ---
 layout: null
+content_type: text/calendar
 permalink: /events.ics
 ---
 BEGIN:VCALENDAR{{ "\r\n" }}
@@ -7,7 +8,7 @@ VERSION:2.0{{ "\r\n" }}
 PRODID:-//BitcoinDistrict.org//Bitcoin Events in the DMV//EN{{ "\r\n" }}
 CALSCALE:GREGORIAN{{ "\r\n" }}
 METHOD:PUBLISH{{ "\r\n" }}
-{% for post in site.posts %}{% if post.draft != true %}BEGIN:VEVENT{{ "\r\n" }}
+{% for post in site.posts %}{% if post.draft != true %}{% if post.date >= site.time %}BEGIN:VEVENT{{ "\r\n" }}
 UID:{{ post.uid | default: post.date | date_to_xmlschema }}-{{ post.title | slugify }}-bitcoindistrict.org{{ "\r\n" }}
 DTSTAMP:{{ site.time | date_to_xmlschema }}{{ "\r\n" }}
 DTSTART:{{ post.date | date_to_xmlschema }}{{ "\r\n" }}
@@ -16,4 +17,4 @@ DTSTART:{{ post.date | date_to_xmlschema }}{{ "\r\n" }}
 {% if post.venue %}{% assign venue = site.data.venues | values | where: "slug", post.venue | first %}{% if venue %}LOCATION:{{ venue.address }}{{ "\r\n" }}{% endif %}{% endif %}
 {% if post.description %}DESCRIPTION:{{ post.description | strip_newlines | strip }}{{ "\r\n" }}{% endif %}
 END:VEVENT{{ "\r\n" }}
-{% endif %}{% endfor %}END:VCALENDAR
+{% endif %}{% endif %}{% endfor %}END:VCALENDAR
