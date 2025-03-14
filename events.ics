@@ -5,6 +5,7 @@ permalink: /events.ics
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//BitcoinDistrict.org//Bitcoin Events in the DMV//EN
+X-WR-CALNAME:Bitcoin District Events
 CALSCALE:GREGORIAN
 BEGIN:VTIMEZONE
 TZID:America/New_York

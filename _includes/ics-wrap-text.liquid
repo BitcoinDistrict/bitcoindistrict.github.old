@@ -4,7 +4,6 @@
 {% for word in words -%}
 {% assign escaped_word = word 
 | replace: ',', '\,' 
-| replace: ':', '\:' 
 | replace: ';', '\;' 
 | replace: '\\', '\\\\' -%}
 {% assign temp_line = current_line | append: " " | append: escaped_word -%}
