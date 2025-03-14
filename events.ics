@@ -26,6 +26,7 @@ METHOD:PUBLISH
 {% for post in site.posts -%}
 {% if post.draft != true and post.date >= site.time -%}
 BEGIN:VEVENT
+COLOR:#FF9900
 UID:{{ post.uid | default: post.path | split: '/' | last | split: '.' | first }}-bitcoindistrict.org
 DTSTAMP;TZID=America/New_York:{{ site.time | date: "%Y%m%dT%H%M%S" | strip }}
 DTSTART;TZID=America/New_York:{{ post.date | date: "%Y%m%dT%H%M%S" | strip }}
