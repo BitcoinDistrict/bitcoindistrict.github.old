@@ -2,11 +2,16 @@
 {% assign text_wrapped = "" -%}
 {% assign current_line = "" -%}
 {% for word in words -%}
-{% assign temp_line = current_line | append: " " | append: word -%}
+{% assign escaped_word = word 
+| replace: ',', '\,' 
+| replace: ':', '\:' 
+| replace: ';', '\;' 
+| replace: '\\', '\\\\' -%}
+{% assign temp_line = current_line | append: " " | append: escaped_word -%}
 {% if temp_line.size > 60 -%}
 {{ text_wrapped | append: current_line }}
 {{ " " }}  {%- assign text_wrapped = "" -%}
-{% assign current_line = word -%}
+{% assign current_line = escaped_word -%}
 {% else -%}
 {% assign current_line = temp_line -%}
 {% endif -%}
