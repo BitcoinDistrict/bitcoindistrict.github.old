@@ -160,6 +160,7 @@ include:
   - .htaccess
   - _pages
   - .well-known
+  - events.ics
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -337,3 +338,7 @@ defaults:
       show_prev_next: false
       sidebar:
         nav: events
+  - scope:
+      path: "events.ics"
+    values:
+      content_type: "text/calendar"

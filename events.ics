@@ -1,44 +1,46 @@
 ---
 layout: null
-content_type: text/calendar
 permalink: /events.ics
 ---
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//BitcoinDistrict.org//Bitcoin Events in the DMV//EN
 CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+DTSTART:19910407T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+END:DAYLIGHT
+BEGIN:STANDARD
+DTSTART:19911027T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+END:STANDARD
+END:VTIMEZONE
 METHOD:PUBLISH
-{% for post in site.posts %}
-  {% if post.draft != true %}
-    {% if post.date >= site.time %}
-      BEGIN:VEVENT
-      UID:{{ post.uid | default: post.date | date_to_xmlschema }}-{{ post.title | slugify }}-bitcoindistrict.org
-      DTSTAMP:{{ site.time | date_to_xmlschema }}
-      DTSTART:{{ post.date | date_to_xmlschema }}
-      {% if post.end_date %}
-        DTEND:{{ post.end_date | date_to_xmlschema }}
-      {% endif %}
-      SUMMARY:{{ post.title }}
-      {% if post.venue %}
-        {% assign venue = site.data.venues | values | where: "slug", post.venue | first %}
-        {% if venue %}
-          LOCATION:{{ venue.address }}
-        {% endif %}
-      {% endif %}
-      {% if post.description %}
-        {% assign description = post.description | strip_newlines %}
-        {% assign lines = description | split: "\n" %}
-        {% for line in lines %}
-          {% if line.size > 75 %}
-            DESCRIPTION: {{ line | slice: 0, 75 }}
-            {{ line | slice: 75, line.size }}
-          {% else %}
-            DESCRIPTION: {{ line }}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-      END:VEVENT
-    {% endif %}
-  {% endif %}
-{% endfor %}
+{% for post in site.posts -%}
+{% if post.draft != true and post.date >= site.time -%}
+BEGIN:VEVENT
+UID:{{ post.uid | default: post.path | split: '/' | last | split: '.' | first }}-bitcoindistrict.org
+DTSTAMP;TZID=America/New_York:{{ site.time | date: "%Y%m%dT%H%M%S" | strip }}
+DTSTART;TZID=America/New_York:{{ post.date | date: "%Y%m%dT%H%M%S" | strip }}
+{% if post.end_date -%}
+DTEND;TZID=America/New_York:{{ post.end_date | date: "%Y%m%dT%H%M%S" | strip }}
+{% endif -%}
+SUMMARY:{% include ics-wrap-text.liquid text=post.title %}
+{% if post.venue -%}
+{% assign venue = site.data.venues | values | where: "slug", post.venue | first -%}
+{% if venue -%}
+LOCATION:{% include ics-wrap-text.liquid text=venue.address %}
+{% endif -%}
+{% endif -%}
+DESCRIPTION:{% include ics-wrap-text.liquid text=post.description %}
+URL:{{post.rsvp_url}}
+END:VEVENT
+{% endif -%}
+{% endfor -%}
 END:VCALENDAR

@@ -1,0 +1,14 @@
+{% assign words = include.text | strip_newlines | replace: '\n', ' ' | split: " " -%}
+{% assign text_wrapped = "" -%}
+{% assign current_line = "" -%}
+{% for word in words -%}
+{% assign temp_line = current_line | append: " " | append: word -%}
+{% if temp_line.size > 60 -%}
+{{ text_wrapped | append: current_line }}
+{{ " " }}  {%- assign text_wrapped = "" -%}
+{% assign current_line = word -%}
+{% else -%}
+{% assign current_line = temp_line -%}
+{% endif -%}
+{% endfor -%}
+{{ text_wrapped | append: current_line }}
