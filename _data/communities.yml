@@ -10,6 +10,10 @@
   image_path: /assets/img/logos/shenandoah.png
   link: "https://www.meetup.com/shenandoah-bitcoin-club"
   description: "Educating and collaborating on Bitcoin in the Northern Shenandoah Valley."
+- title: "Southern Maryland Bitcoiners"
+  image_path: /assets/img/logos/somd.png
+  link: "https://www.meetup.com/southern-maryland-bitcoiners/"
+  description: "Southern Maryland (SOMD) Bitcoiners."
 - title: "Bitcoin Annapolis"
   image_path: /assets/img/logos/annapolis.png
   link: "https://www.meetup.com/bitcoin-annapolis"
