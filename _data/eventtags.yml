@@ -8,7 +8,7 @@ conference:
 
 workshop:
   name        : "Workshop"
-  emoji       : ⚙️
+  emoji       : 👩‍🏫
 
 bitdevs:
   name        : "BitDevs"

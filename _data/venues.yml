@@ -82,3 +82,13 @@ Compass Coffee (Georgetown):
     - label: "🚗 Street Parking"
       detail: "Paid street parking should be available nearby"
   note: Be sure to check out the special [Bitcoin Blend](https://www.compasscoffee.com/products/bitcoin-blend), an El Salvador single-origin roast from our host Compass Coffee. You can order from their website and you can even pay in Bitcoin!
+
+For Five Coffee (Alexandria):
+  name        : "For Five Coffee"
+  slug        : forfivecoffee-alexandria
+  address     : "1800C Diagonal Rd, Alexandria, VA 22314, USA"
+  getting_there:
+    - label: "🚇 Metro"
+      detail: "From DC, Take the YELLOW line to King St-Old Town Metro"
+    - label: "🚗 Street Parking"
+      detail: "Nearby street & public garage parking"
