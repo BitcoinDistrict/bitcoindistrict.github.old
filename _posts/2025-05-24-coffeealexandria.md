@@ -1,7 +1,7 @@
 ---
 title: "Coffee & Bitcoin - Old Town Alexandria"
-date: 2025-05-10 10:30:00 -04:00
-end_date: 2025-05-10 12:30:00 -04:00
+date: 2025-05-24 10:30:00 -04:00
+end_date: 2025-05-24 12:30:00 -04:00
 rsvp_url: "https://www.meetup.com/bitcoin-district/events/307412059"
 description: "Join Bitcoin District for one of our 'Coffee & Bitcoin' meetups to discuss the latest Bitcoin news over coffee! We meet at least once a month."
 venue: forfivecoffee-alexandria
