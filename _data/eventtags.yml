@@ -29,3 +29,7 @@ speaker:
 online:
   name        : "Online"
   emoji       : 🌐
+
+food:
+  name        : "Eat & Drink"
+  emoji       : 🍕
