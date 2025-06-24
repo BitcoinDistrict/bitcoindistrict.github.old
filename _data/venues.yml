@@ -92,3 +92,13 @@ For Five Coffee (Alexandria):
       detail: "From DC, Take the YELLOW line to King St-Old Town Metro"
     - label: "🚗 Street Parking"
       detail: "Nearby street & public garage parking"
+
+Patsys American:
+  name        : "Patsy's American, Tysons Corner"
+  slug        : patsys-american
+  address     : "8051 Leesburg Pike, Vienna, VA 22182, USA"
+  getting_there:
+    - label: "🚇 Metro"
+      detail: "Tysons Station (silver line) + 15 minute walk"
+    - label: "🚗 Parking"
+      detail: "Ample parking at the restaurant"
