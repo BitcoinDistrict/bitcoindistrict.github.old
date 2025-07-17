@@ -33,3 +33,7 @@ online:
 food:
   name        : "Eat & Drink"
   emoji       : 🍕
+
+merchant:
+  name        : "Merchant"
+  emoji       : 🪙
