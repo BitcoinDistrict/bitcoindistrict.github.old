@@ -5,7 +5,7 @@ end_date: 2025-06-04 20:00:00 -04:00
 rsvp_url: "https://www.meetup.com/bitcoin-district/events/307403981"
 description: "Join Nik Bhatia, author of Bitcoin Age, for \"The Great Monetary Shift,\" a fireside chat exploring how Bitcoin is redefining wealth and reshaping global finance in a new monetary era."
 venue: "George Washington University (Duques Hall Room 151)"
-address: 2201 G St NW, Washington, DC 20052
+address: "2201 G St NW, Washington, DC 20052, USA"
 layout: event
 photo: "/assets/img/events/bhatia2025.jpg"
 header:
