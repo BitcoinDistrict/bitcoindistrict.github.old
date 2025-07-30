@@ -1,0 +1,241 @@
+---
+layout: default
+---
+
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+      crossorigin=""/>
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title -%}
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+          </h1>
+          {%- endif %}
+          {% include page__meta.html %}
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+        {% if page.toc %}
+          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
+              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
+            </nav>
+          </aside>
+        {% endif %}
+        
+        <!-- Split content to insert map in the middle -->
+        {% assign content_parts = content | split: '<!-- Interactive Map will be inserted here by the map-page layout -->' %}
+        
+        {{ content_parts[0] }}
+        
+        <!-- Interactive Map -->
+        <div id="map" style="height: 400px; width: 100%; margin-top: 1rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
+        
+        {{ content_parts[1] }}
+        
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+      </section>
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+        {% include page__date.html %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+    </div>
+
+    {% if site.comments.provider and page.comments %}
+      {% if jekyll.environment == 'production' %}
+        {% include comments.html %}
+      {% else %}
+        <p>
+          Comments are configured with provider: <strong>{{ site.comments.provider }}</strong>,
+          but are disabled in non-production environments.
+        </p>
+      {% endif %}
+    {% endif %}
+  </article>
+
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    {% include page__related.html posts=site.related_posts %}
+  {% elsif page.id and page.related %}
+    {% include page__related.html posts=site.posts %}
+  {% endif %}
+</div>
+
+<!-- Data script -->
+<script>
+  window.meetupsData = [
+    {% for meetup in site.data.meetups %}
+    {
+      title: "{{ meetup.title }}",
+      description: "{{ meetup.description }}",
+      address: "{{ meetup.address }}",
+      link: "{{ meetup.link }}",
+      image_path: "{{ meetup.image_path }}",
+      latitude: {{ meetup.latitude }},
+      longitude: {{ meetup.longitude }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+</script>
+
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+        crossorigin=""></script>
+
+<script>
+  // Initialize the map - center on DC area coordinates
+  var map = L.map('map').setView([38.9072, -77.0369], 10);
+
+  // Add OpenStreetMap tile layer
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18
+  }).addTo(map);
+
+  // Wait for data to load, then initialize markers
+  function initializeMap() {
+    var meetups = window.meetupsData;
+    
+    console.log('Meetups data loaded:', meetups);
+    
+    if (meetups && meetups.length > 0) {
+      var validMarkers = [];
+      
+      meetups.forEach(function(meetup, index) {
+        console.log('Processing meetup', index + 1, ':', meetup);
+        
+        // Check if latitude and longitude exist and are valid numbers
+        var lat = parseFloat(meetup.latitude);
+        var lng = parseFloat(meetup.longitude);
+        
+        if (!isNaN(lat) && !isNaN(lng)) {
+          console.log('Adding marker for:', meetup.title, 'at', lat, lng);
+          
+          // Create popup content
+          var popupContent = '<div style="min-width: 200px;">';
+          popupContent += '<h4 style="margin: 0 0 8px 0; color: #2c3e50;">' + (meetup.title || 'Bitcoin Meetup') + '</h4>';
+          popupContent += '<p style="margin: 0 0 8px 0; font-size: 14px;">' + (meetup.description || '') + '</p>';
+          
+          if (meetup.address) {
+            popupContent += '<p style="margin: 0 0 8px 0; font-size: 12px; color: #7f8c8d;"><i class="fas fa-map-marker-alt"></i> ' + meetup.address + '</p>';
+          }
+          
+          if (meetup.link) {
+            popupContent += '<p style="margin: 0;"><a href="' + meetup.link + '" target="_blank" rel="noopener noreferrer" style="color: #3498db; text-decoration: none;">Visit Meetup Page <i class="fas fa-external-link-alt"></i></a></p>';
+          }
+          
+          popupContent += '</div>';
+          
+          // Add marker with popup
+          var marker = L.marker([lat, lng])
+            .addTo(map)
+            .bindPopup(popupContent, {
+              maxWidth: 300,
+              className: 'custom-popup'
+            });
+            
+          validMarkers.push([lat, lng]);
+          console.log('Marker added successfully for:', meetup.title);
+        } else {
+          console.warn('Invalid coordinates for meetup:', meetup.title, 'lat:', meetup.latitude, 'lng:', meetup.longitude);
+        }
+      });
+      
+      // Fit map to show all markers if we have valid coordinates
+      if (validMarkers.length > 0) {
+        console.log('Fitting map to', validMarkers.length, 'markers');
+        if (validMarkers.length === 1) {
+          // If only one marker, center on it with a reasonable zoom
+          map.setView(validMarkers[0], 12);
+        } else {
+          // If multiple markers, fit bounds with padding
+          var group = new L.featureGroup();
+          validMarkers.forEach(function(coords) {
+            L.marker(coords).addTo(group);
+          });
+          map.fitBounds(group.getBounds(), { padding: [20, 20] });
+        }
+      } else {
+        console.warn('No valid markers found to display');
+      }
+    } else {
+      console.warn('No meetups data found or invalid data structure:', meetups);
+    }
+  }
+
+  // Try to initialize immediately, or wait a bit for the data script to load
+  if (window.meetupsData) {
+    initializeMap();
+  } else {
+    setTimeout(initializeMap, 100);
+  }
+
+  /*
+  // Custom icon example - uncomment and modify as needed
+  var customIcon = L.icon({
+    iconUrl: '{{ site.url }}{{ site.baseurl }}/assets/images/marker-icon.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowUrl: '{{ site.url }}{{ site.baseurl }}/assets/images/marker-shadow.png',
+    shadowSize: [41, 41]
+  });
+  
+  // Then use: L.marker(latLng, {icon: customIcon})
+  */
+</script>
+
+<style>
+  /* Custom styling for map popups */
+  .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+  }
+  
+  .custom-popup .leaflet-popup-content {
+    margin: 12px 16px;
+    line-height: 1.4;
+  }
+  
+  .custom-popup h4 {
+    font-weight: 600;
+  }
+  
+  /* Responsive map adjustments */
+  @media (max-width: 768px) {
+    #map {
+      height: 300px;
+      margin-top: 1rem;
+    }
+  }
+</style> 
